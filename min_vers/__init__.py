@@ -36,7 +36,6 @@ import abc
 import collections
 import pathlib
 import typing
-import zipfile
 
 import packaging.requirements
 
@@ -90,26 +89,35 @@ class _PyProjectExtractor(_Extractor):
         return {}
 
 
-def _metadata_filter(value: str) -> bool:
-    return value.endswith(".dist-info/METADATA") and value.count("/") == 1
-
-
 class _WheelExtractor(_Extractor):
     __slots__ = ("_dependencies", "_optional_dependencies")
 
     def __init__(self, path: pathlib.Path, /) -> None:
-        self._dependencies: list[str] = []
-        self._optional_dependencies: dict[str, list[str]] = {}
-        with zipfile.ZipFile(path) as open_zip:
-            metadata_file = next(filter(_metadata_filter, iter(open_zip.namelist())))
-            with open_zip.open(metadata_file) as file:
-                ...
+        import pkginfo  # pyright: ignore [ reportMissingTypeStubs]
+
+        self._dependencies: list[packaging.requirements.Requirement] = []
+        self._optional_dependencies: dict[str, list[packaging.requirements.Requirement]] = {}
+
+        required = pkginfo.Wheel(path).requires_dist
+        for constraint in map(packaging.requirements.Requirement, required):
+            if not constraint.extras:
+                self._dependencies.append(constraint)
+                continue
+
+            extras = constraint.extras
+            constraint.extras = set()
+            for extra in extras:
+                try:
+                    self._optional_dependencies[extra].append(constraint)
+
+                except KeyError:
+                    self._optional_dependencies[extra] = [constraint]
 
     def dependencies(self) -> list[packaging.requirements.Requirement]:
-        raise NotImplementedError
+        return self._dependencies
 
     def optional_dependencies(self) -> dict[str, list[packaging.requirements.Requirement]]:
-        raise NotImplementedError
+        return self._optional_dependencies
 
 
 class _RequirementsExtractor(_Extractor):
@@ -131,5 +139,3 @@ class _RequirementsExtractor(_Extractor):
 
     def optional_dependencies(self) -> dict[str, list[packaging.requirements.Requirement]]:
         return self._dependencies
-
-
