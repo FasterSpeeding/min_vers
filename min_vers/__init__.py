@@ -38,9 +38,11 @@ import pathlib
 import typing
 
 import packaging.requirements
+import pkginfo  # pyright: ignore [ reportMissingTypeStubs]
 
 if typing.TYPE_CHECKING:
     import shippinglabel.requirements
+    from typing_extensions import Self
 
 __author__: typing.Final[str] = "Faster Speeding"
 __ci__: typing.Final[str] = "https://github.com/FasterSpeeding/min_vers/actions"
@@ -89,17 +91,14 @@ class _PyProjectExtractor(_Extractor):
         return {}
 
 
-class _WheelExtractor(_Extractor):
+class _PkgExtractor(_Extractor):
     __slots__ = ("_dependencies", "_optional_dependencies")
 
-    def __init__(self, path: pathlib.Path, /) -> None:
-        import pkginfo  # pyright: ignore [ reportMissingTypeStubs]
-
+    def __init__(self, distribution: pkginfo.Distribution, /) -> None:
         self._dependencies: list[packaging.requirements.Requirement] = []
         self._optional_dependencies: dict[str, list[packaging.requirements.Requirement]] = {}
 
-        required = pkginfo.Wheel(path).requires_dist
-        for constraint in map(packaging.requirements.Requirement, required):
+        for constraint in map(packaging.requirements.Requirement, distribution.requires_dist):
             if not constraint.extras:
                 self._dependencies.append(constraint)
                 continue
@@ -112,6 +111,10 @@ class _WheelExtractor(_Extractor):
 
                 except KeyError:
                     self._optional_dependencies[extra] = [constraint]
+
+    @classmethod
+    def for_wheel(cls, path: pathlib.Path, /) -> Self:
+        return cls(pkginfo.Wheel(path))
 
     def dependencies(self) -> list[packaging.requirements.Requirement]:
         return self._dependencies

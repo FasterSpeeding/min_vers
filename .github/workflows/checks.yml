@@ -68,9 +68,6 @@ jobs:
       - name: Run type checker
         run: python -m nox -s type-check -- --force-env
 
-      - name: Run verify types
-        run: python -m nox -s verify-types -- --force-env
-
   test:
     strategy:
       fail-fast: false

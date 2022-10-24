@@ -39,7 +39,7 @@ from collections import abc as collections
 
 import nox
 
-nox.options.sessions = ["reformat", "flake8", "spell-check", "slot-check", "type-check", "test", "verify-types"]  # type: ignore
+nox.options.sessions = ["reformat", "flake8", "spell-check", "slot-check", "type-check", "test"]  # type: ignore
 GENERAL_TARGETS = ["./noxfile.py", "./tests"]
 _BLACKLISTED_TARGETS = {"__pycache__"}
 for path in pathlib.Path("./min_vers").glob("*"):
@@ -269,13 +269,6 @@ def type_check(session: nox.Session) -> None:
     session.run("python", "-m", "mypy", "--version")
     # Right now MyPy is allowed to fail without failing CI as the alternative is to let MyPy bugs block releases.
     session.run("python", "-m", "mypy", "min_vers", "--show-error-codes", success_codes=[0, 1])
-
-
-@nox.session(name="verify-types", reuse_venv=True)
-def verify_types(session: nox.Session) -> None:
-    """Verify the "type completeness" of types exported by the library using Pyright."""
-    install_requirements(session, ".", *_dev_dep("type-checking"))
-    _run_pyright(session, "--verifytypes", "min_vers", "--ignoreexternal")
 
 
 @nox.session(name="check-dependencies")
