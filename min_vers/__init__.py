@@ -33,7 +33,6 @@
 from __future__ import annotations
 
 import abc
-import collections
 import pathlib
 import typing
 
@@ -41,6 +40,8 @@ import packaging.requirements
 import pkginfo  # pyright: ignore [ reportMissingTypeStubs ]
 
 if typing.TYPE_CHECKING:
+    from collections import abc as collections
+
     import shippinglabel.requirements
     from typing_extensions import Self
 
