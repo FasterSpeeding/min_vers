@@ -113,7 +113,19 @@ class _PkgExtractor(_Extractor):  # pyright: ignore [ reportUnusedClass ]
                     self._optional_dependencies[extra] = [constraint]
 
     @classmethod
-    def for_wheel(cls, path: pathlib.Path, /) -> Self:
+    def from_installed(cls, path: str, /) -> Self:
+        package = pkginfo.Installed(path)
+        if package.package is None:
+            raise ModuleNotFoundError(f"{path!r} is not installed")
+
+        return cls(package)
+
+    @classmethod
+    def from_sdist(cls, path: pathlib.Path, /) -> Self:
+        return cls(pkginfo.SDist(path))
+
+    @classmethod
+    def from_wheel(cls, path: pathlib.Path, /) -> Self:
         return cls(pkginfo.Wheel(path))
 
     def dependencies(self) -> list[packaging.requirements.Requirement]:

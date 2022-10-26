@@ -80,7 +80,7 @@ reportPrivateUsage = "none"                     # Leads to funky false-positives
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-required_plugins = ["anyio"]
+required_plugins = []
 
 [tool.mypy]
 # some good strict settings
