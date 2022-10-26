@@ -38,7 +38,7 @@ import pathlib
 import typing
 
 import packaging.requirements
-import pkginfo  # pyright: ignore [ reportMissingTypeStubs]
+import pkginfo  # pyright: ignore [ reportMissingTypeStubs ]
 
 if typing.TYPE_CHECKING:
     import shippinglabel.requirements
