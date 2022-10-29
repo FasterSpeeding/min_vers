@@ -30,14 +30,11 @@ dependencies = [
 ]
 dynamic = ["description"]
 
-[project.optional-dependencies]
-meow = ["alluka~=0.0.1; platform_system != 'Windows'"]
-
 [project.urls]
-homepage = "https://github.com/FasterSpeeding/min_vers"
-repository = "https://github.com/FasterSpeeding/min_vers"
-documentation = "https://github.com/FasterSpeeding/min_vers"
-changelog = "https://github.com/FasterSpeeding/min_vers/blob/master/CHANGELOG.md"
+Homepage = "https://github.com/FasterSpeeding/min_vers"
+Repository = "https://github.com/FasterSpeeding/min_vers"
+Documentation = "https://github.com/FasterSpeeding/min_vers"
+Changelog = "https://github.com/FasterSpeeding/min_vers/blob/master/CHANGELOG.md"
 
 [tool.black]
 line-length     = 120
