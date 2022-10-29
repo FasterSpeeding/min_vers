@@ -45,17 +45,6 @@ if typing.TYPE_CHECKING:
     import shippinglabel.requirements
     from typing_extensions import Self
 
-__author__: typing.Final[str] = "Faster Speeding"
-__ci__: typing.Final[str] = "https://github.com/FasterSpeeding/min_vers/actions"
-__copyright__: typing.Final[str] = "© 2020-2022 Faster Speeding"
-__coverage__: typing.Final[str] = "https://codeclimate.com/github/FasterSpeeding/min_vers"
-__docs__: typing.Final[str] = "https://github.com/FasterSpeeding/min_vers"
-__email__: typing.Final[str] = "lucina@lmbyrne.dev"
-__issue_tracker__: typing.Final[str] = "https://github.com/FasterSpeeding/min_vers/issues"
-__license__: typing.Final[str] = "BSD"
-__url__: typing.Final[str] = "https://github.com/FasterSpeeding/min_vers"
-__version__: typing.Final[str] = "0.1.0"
-
 
 class _Extractor(abc.ABC):
     __slots__ = ()

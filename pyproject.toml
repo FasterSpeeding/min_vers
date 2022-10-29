@@ -4,6 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "min_vers"
+version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.9.0,<3.12"
 license = {file = "LICENSE"}
@@ -27,7 +28,7 @@ dependencies = [
     "pyproject-parser~=0.7.0",
     "requirements-parser~=0.5.0",
 ]
-dynamic = ["description", "version"]
+dynamic = ["description"]
 
 [project.optional-dependencies]
 meow = ["alluka~=0.0.1; platform_system != 'Windows'"]
