@@ -91,6 +91,51 @@ per-file-ignores = ["tests/*.py: D100, D104"]
 profile = "black"
 force_single_line = true
 
+[tool.mypy]
+# some good strict settings
+strict = true
+warn_unreachable = true
+
+# more narrow type ignores
+show_error_codes = true
+
+# these are used by pyright
+warn_unused_ignores = false
+warn_redundant_casts = false
+
+# compatibility with pyright
+allow_redefinition = true
+
+[tool.piped]
+codespell_ignore = "TimeSchedule|Nd"
+default_sessions = [
+    "reformat",
+    "verify-markup",
+    "flake8",
+    "spell-check",
+    "slot-check",
+    "type-check",
+    "test",
+]
+hide = ["generate-docs", "verify-types"]
+extra_test_installs = ["."]
+project_name = "min_vers"
+top_level_targets = ["./min_vers", "./noxfile.py", "./tests"]
+
+[tool.piped.github_actions.freeze_for_pr]
+[tool.piped.github_actions.lint]
+[tool.piped.github_actions.publish]
+[tool.piped.github_actions.py_lint]
+[tool.piped.github_actions.py_test]
+codeclimate_token = "6afbda1b66ce6caab04965d92bee9ab4b02afef58568c6402455b25032b8b865"
+python_versions = "[3.9, 3.10.5, 3.11]"
+
+[tool.piped.github_actions.reformat]
+[tool.piped.github_actions.resync_piped]
+[tool.piped.github_actions.type_check]
+[tool.piped.github_actions.upgrade_locks]
+[tool.piped.github_actions.verify_locks]
+
 [tool.pyright]
 include = ["min_vers", "noxfile.py", "tests"]
 
@@ -108,21 +153,6 @@ reportPrivateUsage = "none"                     # Leads to funky false-positives
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 required_plugins = []
-
-[tool.mypy]
-# some good strict settings
-strict = true
-warn_unreachable = true
-
-# more narrow type ignores
-show_error_codes = true
-
-# these are used by pyright
-warn_unused_ignores = false
-warn_redundant_casts = false
-
-# compatibility with pyright
-allow_redefinition = true
 
 [tool.slotscheck]
 strict-imports = true
