@@ -7,9 +7,6 @@ on:
       - published
 
 jobs:
-  publish-docs:
-    uses: ./.github/workflows/release-docs.yml
-
   publish:
     runs-on: ubuntu-latest
 
