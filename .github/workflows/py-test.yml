@@ -48,7 +48,6 @@ jobs:
   # the result once https://github.com/nedbat/coveragepy/issues/1002 is fixed?
   upload-coverage:
     # needs: [test]
-    if: "'6afbda1b66ce6caab04965d92bee9ab4b02afef58568c6402455b25032b8b865' != ''"
     runs-on: ubuntu-latest
 
     steps:
