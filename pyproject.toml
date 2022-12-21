@@ -129,7 +129,6 @@ hide = ["generate-docs", "verify-types"]
 extra_test_installs = ["."]
 project_name = "min_vers"
 top_level_targets = ["./min_vers", "./noxfile.py", "./tests"]
-version_constraint = "3.9<3.13"
 
 [tool.piped.github_actions.freeze_for_pr]
 [tool.piped.github_actions.lint]
