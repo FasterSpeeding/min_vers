@@ -1,13 +1,22 @@
-name: Publish a new release
+name: Type check
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
-  release:
-    # Only use the types keyword to narrow down the activity types that will trigger your workflow.
-    types:
-      - published
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: "0 12 * * 6"
+  workflow_dispatch:
 
 jobs:
-  publish:
+  type-check:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,12 +29,10 @@ jobs:
         with:
           python-version: "3.9"
 
-      - name: Install prerequisites
+      - name: install prerequisites
         run: |
           python -m pip install --upgrade pip wheel
           python -m pip install -r ./piped/python/base-requirements/nox.txt
 
-      - name: publish
-        run: python -m nox -s publish
-        env:
-          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+      - name: Run type checker
+        run: python -m nox -s type-check
