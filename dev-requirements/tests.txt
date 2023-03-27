@@ -180,9 +180,9 @@ packaging==23.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
 pkginfo==1.8.3 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:848865108ec99d4901b2f7e84058b6e7660aae8ae10164e015a6dcf5b242a594 \
     --hash=sha256:a84da4318dd86f870a9447a8c98340aa06216bfc6f2b7bdc4b8766984ae1867c
-platformdirs==3.1.1 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:024996549ee88ec1a9aa99ff7f8fc819bb59e2c3477b410d90a16d32d6e707aa \
-    --hash=sha256:e5986afb596e4bb5bde29a79ac9061aa955b94fca2399b7aaac4090860920dd8
+platformdirs==3.2.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:d5b638ca397f25f979350ff789db335903d7ea010ab28903f57b27e1b16c2b08 \
+    --hash=sha256:ebe11c0d7a805086e99506aa331612429a72ca7cd52a1f0d277dc4adc20cb10e
 pluggy==1.0.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159 \
     --hash=sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3
