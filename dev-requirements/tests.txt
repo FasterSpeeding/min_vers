@@ -219,9 +219,9 @@ toml==0.10.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
 tomli==2.0.1 ; python_full_version >= "3.9.0" and python_full_version <= "3.11.0a6" \
     --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
     --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
-types-setuptools==67.6.0.5 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:3a708e66c7bdc620e4d0439f344c750c57a4340c895a4c3ed2d0fc4ae8eb9962 \
-    --hash=sha256:dae5a4a659dbb6dba57773440f6e2dbdd8ef282dc136a174a8a59bd33d949945
+types-setuptools==67.6.0.6 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:a5efd019b53c5793a112e0112b91bb402df749f75ee7abe681b6240841650ce4 \
+    --hash=sha256:fb46e651c6b5880ec8932a8876aa832071d612b2954fc5156b09cd263927d85b
 typing-extensions==4.5.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:5cb5f4a79139d699607b3ef622a1dedafa84e115ab0024e0d9c044a9479ca7cb \
     --hash=sha256:fb33085c39dd998ac16d1431ebc293a8b3eedd00fd4a32de0ff79002c19511b4
