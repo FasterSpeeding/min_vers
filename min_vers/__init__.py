@@ -59,7 +59,7 @@ class _Extractor(abc.ABC):
         ...
 
 
-class _PyProjectExtractor(_Extractor):  # pyright: ignore [ reportUnusedClass ]
+class _PyProjectExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     __slots__ = ("_pyproject",)
 
     def __init__(self, path: pathlib.Path, /) -> None:
@@ -80,10 +80,10 @@ class _PyProjectExtractor(_Extractor):  # pyright: ignore [ reportUnusedClass ]
         return {}
 
 
-class _PkgExtractor(_Extractor):  # pyright: ignore [ reportUnusedClass ]
+class _PkgExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     __slots__ = ("_dependencies", "_optional_dependencies")
 
-    def __init__(self, distribution: pkginfo.Distribution, /) -> None:  # pyright: ignore[ reportUnknownParameterType ]
+    def __init__(self, distribution: pkginfo.Distribution, /) -> None:
         self._dependencies: list[packaging.requirements.Requirement] = []
         self._optional_dependencies: dict[str, list[packaging.requirements.Requirement]] = {}
 
