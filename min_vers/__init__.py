@@ -124,7 +124,7 @@ class _PkgExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
         return self._optional_dependencies
 
 
-class _RequirementsExtractor(_Extractor):  # pyright: ignore [ reportUnusedClass ]
+class _RequirementsExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     __slots__ = ("_dependencies",)
 
     def __init__(self, *paths: pathlib.Path) -> None:
