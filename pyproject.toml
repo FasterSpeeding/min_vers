@@ -93,7 +93,7 @@ ignore = [
 # Doc errors don't matter in the tests
 per-file-ignores = [
     "noxfile.py: D100, FA101, F401, F403, INP001",
-    "tests/*.py: D100, D103, D104, FA101",
+    "tests/*.py: DALL000, D100, D103, D104, FA101",
 ]
 
 [tool.isort]
