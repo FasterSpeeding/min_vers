@@ -49,14 +49,12 @@ class _Extractor(abc.ABC):
     __slots__ = ()
 
     @abc.abstractmethod
-    def dependencies(self) -> collections.Sequence[packaging.requirements.Requirement]:
-        ...
+    def dependencies(self) -> collections.Sequence[packaging.requirements.Requirement]: ...
 
     @abc.abstractmethod
     def optional_dependencies(
         self,
-    ) -> collections.Mapping[str, collections.Sequence[packaging.requirements.Requirement]]:
-        ...
+    ) -> collections.Mapping[str, collections.Sequence[packaging.requirements.Requirement]]: ...
 
 
 class _PyProjectExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
