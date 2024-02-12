@@ -434,9 +434,9 @@ requests==2.31.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
 requirements-parser==0.5.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:3336f3a3ae23e06d3f0f88595e4052396e3adf91688787f637e5d2ca1a904069 \
     --hash=sha256:e7fcdcd04f2049e73a9fb150d8a0f9d51ce4108f5f7cbeac74c484e17b12bcd9
-setuptools==69.0.3 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05 \
-    --hash=sha256:be1af57fc409f93647f2e8e4573a142ed38724b8cdd389706a867bb4efcf1e78
+setuptools==69.1.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401 \
+    --hash=sha256:c054629b81b946d63a9c6e732bc8b2513a7c3ea645f11d0139a2191d735c60c6
 shippinglabel==1.7.1 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:cf8d54a1b2b4c5fe22c38944a2fcd3d246f70187dcdb8d5a51f09f21353e04ee \
     --hash=sha256:ffe6e95c1c190f0b4c073ed919e3a253ba3038af07ba920e7e335c365af2def0
