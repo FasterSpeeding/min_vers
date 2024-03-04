@@ -155,9 +155,9 @@ shippinglabel==1.7.1 ; python_full_version >= "3.9.0" and python_version < "3.13
 toml==0.10.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b \
     --hash=sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f
-types-setuptools==69.1.0.20240301 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:2033afa8efe3f566ec18997c4b614664b2ed9653160d941745389ad61a50d1f6 \
-    --hash=sha256:f99cf5a7f5c281c55f16ba860da68cb2cd8f3b3a472f78ec8e744240fc3aa09e
+types-setuptools==69.1.0.20240302 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:99c1053920a6fa542b734c9ad61849c3993062f80963a4034771626528e192a0 \
+    --hash=sha256:ed5462cf8470831d1bdbf300e1eeea876040643bfc40b785109a5857fa7d3c3f
 typing-extensions==4.10.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475 \
     --hash=sha256:b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb
