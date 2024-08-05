@@ -7,9 +7,9 @@
 apeye-core==1.1.5 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:5de72ed3d00cc9b20fea55e54b7ab8f5ef8500eb33a5368bc162a5585e238a55 \
     --hash=sha256:dc27a93f8c9e246b3b238c5ea51edf6115ab2618ef029b9f2d9a190ec8228fbf
-attrs==23.2.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30 \
-    --hash=sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1
+attrs==24.1.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:377b47448cb61fea38533f671fba0d0f8a96fd58facd4dc518e3dac9dbea0905 \
+    --hash=sha256:adbdec84af72d38be7628e353a09b6a6790d15cd71819f6e9d7b0faa8a125745
 dist-meta==0.8.1 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:e417192972dca8fb95076d8e29e2a3e0f0c5d16436b22f47b9824e538d27d900 \
     --hash=sha256:e73b873b08361835e25592d4d74129f0353bca4451dd12bfa10aaf14af4682e4
