@@ -49,9 +49,9 @@ toml==0.10.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
 tomli==2.0.1 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
     --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
-types-setuptools==74.0.0.20240831 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:4d9d18ea9214828d695a384633130009f5dee2681a157ee873d3680b62931590 \
-    --hash=sha256:8b4a544cc91d42a019dc1e41fd397608b4bc7e20c7d7d5bc326589ffd9e8f8a1
+types-setuptools==74.1.0.20240907 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:0abdb082552ca966c1e5fc244e4853adc62971f6cd724fb1d8a3713b580e5a65 \
+    --hash=sha256:15b38c8e63ca34f42f6063ff4b1dd662ea20086166d5ad6a102e670a52574120
 typing-extensions==4.12.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d \
     --hash=sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8
