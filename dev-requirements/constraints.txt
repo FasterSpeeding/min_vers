@@ -22,9 +22,9 @@ domdf-python-tools==3.9.0 ; python_full_version >= "3.9.0" and python_version < 
 handy-archives==0.2.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:8495e08f3cd1c452fe65570db1869db07f709149f85c7e9cd8f3f461df436318 \
     --hash=sha256:fba21101fd9e29d5e3b72823261aaae06b9350686f0d2067786d64dce73eb3f6
-idna==3.8 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:050b4e5baadcd44d760cedbd2b8e639f2ff89bbc7a5730fcc662954303377aac \
-    --hash=sha256:d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603
+idna==3.10 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9 \
+    --hash=sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3
 natsort==8.4.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:45312c4a0e5507593da193dedd04abb1469253b601ecaf63445ad80f0a1ea581 \
     --hash=sha256:4732914fb471f56b5cce04d7bae6f164a592c7712e1c85f9ef585e197299521c
