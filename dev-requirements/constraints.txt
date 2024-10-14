@@ -40,18 +40,18 @@ pyproject-parser==0.7.0 ; python_full_version >= "3.9.0" and python_version < "3
 requirements-parser==0.5.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:3336f3a3ae23e06d3f0f88595e4052396e3adf91688787f637e5d2ca1a904069 \
     --hash=sha256:e7fcdcd04f2049e73a9fb150d8a0f9d51ce4108f5f7cbeac74c484e17b12bcd9
-shippinglabel==2.0.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:85962c2be217fdae1b64cb43fa13046039f082a85d924107906d0c3e4020cb6d \
-    --hash=sha256:8c28473a6175cc1c3fa54b194197b800609d0f2e7743516b7a54242bbb8eb7ec
+shippinglabel==2.1.0 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:5f013f6fb4d0ee2fb684c49d6498725639769627b07992db03a3d77122539c51 \
+    --hash=sha256:e701042ebd6e1c3a2c7e3f1334cae4f76430dc9ae9c2244a87d5f29c20b3d16f
 toml==0.10.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b \
     --hash=sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f
 tomli==2.0.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:2ebe24485c53d303f690b0ec092806a085f07af5a5aa1464f3931eec36caaa38 \
     --hash=sha256:d46d457a85337051c36524bc5349dd91b1877838e2979ac5ced3e710ed8a60ed
-types-setuptools==75.1.0.20240917 ; python_full_version >= "3.9.0" and python_version < "3.13" \
-    --hash=sha256:06f78307e68d1bbde6938072c57b81cf8a99bc84bd6dc7e4c5014730b097dc0c \
-    --hash=sha256:12f12a165e7ed383f31def705e5c0fa1c26215dd466b0af34bd042f7d5331f55
+types-setuptools==75.1.0.20241014 ; python_full_version >= "3.9.0" and python_version < "3.13" \
+    --hash=sha256:29b0560a8d4b4a91174be085847002c69abfcb048e20b33fc663005aedf56804 \
+    --hash=sha256:caab58366741fb99673d0138b6e2d760717f154cfb981b74fea5e8de40f0b703
 typing-extensions==4.12.2 ; python_full_version >= "3.9.0" and python_version < "3.13" \
     --hash=sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d \
     --hash=sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8
