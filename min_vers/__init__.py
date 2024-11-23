@@ -42,7 +42,7 @@ if typing.TYPE_CHECKING:
     from collections import abc as collections
 
     import shippinglabel.requirements
-    from typing_extensions import Self
+    from typing import Self
 
 
 class _Extractor(abc.ABC):
