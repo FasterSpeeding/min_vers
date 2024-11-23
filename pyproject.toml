@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "min_vers"
 version = "0.1.0"
 readme = "README.md"
-requires-python = ">=3.11.0,<3.14"
+requires-python = ">=3.11.0,<3.15"
 license = {file = "LICENSE"}
 authors = [ {name = "Faster Speeding", email="lucina@lmbyrne.dev"} ]
 keywords = ["DI", "injection"]
