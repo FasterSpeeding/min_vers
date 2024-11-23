@@ -40,9 +40,9 @@ import pkginfo  # pyright: ignore[reportMissingTypeStubs]
 
 if typing.TYPE_CHECKING:
     from collections import abc as collections
+    from typing import Self
 
     import shippinglabel.requirements
-    from typing_extensions import Self
 
 
 class _Extractor(abc.ABC):
