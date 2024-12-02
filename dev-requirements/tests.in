@@ -1,4 +1,0 @@
--r ../piped/python/base-requirements/tests.in
--r ./constraints.in
-
-pytest-xdist>=3.1

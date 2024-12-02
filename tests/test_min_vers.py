@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # BSD 3-Clause License
 #
 # Copyright (c) 2022-2024, Faster Speeding
@@ -30,5 +29,5 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-def test_true():
+def test_true() -> None:
     pass  # Empty test to let CI pass

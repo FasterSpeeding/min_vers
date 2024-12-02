@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # BSD 3-Clause License
 #
 # Copyright (c) 2022-2024, Faster Speeding
@@ -32,13 +31,13 @@
 from __future__ import annotations
 
 import abc
-import pathlib
 import typing
 
 import packaging.requirements
 import pkginfo  # pyright: ignore[reportMissingTypeStubs]
 
 if typing.TYPE_CHECKING:
+    import pathlib
     from collections import abc as collections
     from typing import Self
 
@@ -103,7 +102,8 @@ class _PkgExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     def from_installed(cls, path: str, /) -> Self:
         package = pkginfo.Installed(path)
         if package.package is None:
-            raise ModuleNotFoundError(f"{path!r} is not installed")
+            error_message = f"{path!r} is not installed"
+            raise ModuleNotFoundError(error_message)
 
         return cls(package)
 
