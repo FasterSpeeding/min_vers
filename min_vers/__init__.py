@@ -60,7 +60,7 @@ class _PyProjectExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     __slots__ = ("_pyproject",)
 
     def __init__(self, path: pathlib.Path, /) -> None:
-        import pyproject_parser # noqa: PLC0415  # `import` should be at the top-level of a file
+        import pyproject_parser  # noqa: PLC0415  # `import` should be at the top-level of a file
 
         self._pyproject: pyproject_parser.PyProject = pyproject_parser.PyProject.load(str(path.absolute()))
 
@@ -126,7 +126,7 @@ class _RequirementsExtractor(_Extractor):  # pyright: ignore [reportUnusedClass]
     __slots__ = ("_dependencies",)
 
     def __init__(self, *paths: pathlib.Path) -> None:
-        import requirements # noqa: PLC0415  # `import` should be at the top-level of a file
+        import requirements  # noqa: PLC0415  # `import` should be at the top-level of a file
 
         self._dependencies: dict[str, list[packaging.requirements.Requirement]] = {}
         for path in paths:
